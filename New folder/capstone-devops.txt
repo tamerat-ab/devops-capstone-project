@@ -1,0 +1,4 @@
+capstone-devops
+
+repository :https://github.com/tamerat-ab/devops-capstone-project
+zenhub :https://github.com/tamerat-ab/devops-capstone-project#workspaces/capstone-project-64c3ba4abd4d7d0014353e79/board
