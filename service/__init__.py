@@ -9,6 +9,12 @@ from flask import Flask
 from service import config
 from service.common import log_handlers
 
+# from flask import Flask
+from flask.logging import create_logger
+
+app = Flask(__name__)
+app.logger = create_logger(app)
+
 # Create Flask application
 app = Flask(__name__)
 app.config.from_object(config)
