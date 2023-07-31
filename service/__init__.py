@@ -8,15 +8,21 @@ import sys
 from flask import Flask
 from service import config
 from service.common import log_handlers
+from flask_talisman import Talisman
+
 
 from flask.logging import create_logger
 
-app = Flask(__name__)
-app.logger = create_logger(app)
+# app = Flask(__name__)
+# talisman = Talisman(app)
+# app.logger = create_logger(app)
 
 # Create Flask application
 app = Flask(__name__)
+talisman = Talisman(app)
 app.config.from_object(config)
+app.logger = create_logger(app)
+
 
 # Import the routes After the Flask app is created
 # pylint: disable=wrong-import-position, cyclic-import, wrong-import-order
