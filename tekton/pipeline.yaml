@@ -13,9 +13,9 @@ spec:
     - name: pipeline-workspace
   params:
     - name: repo-url
-    - name: build-image
     - name: branch
       default: main
+    - name: build-image
   tasks:
     - name: init
       workspaces:
